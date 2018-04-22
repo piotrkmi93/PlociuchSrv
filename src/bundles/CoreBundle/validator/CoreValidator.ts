@@ -1,4 +1,6 @@
 import { Request, Response, NextFunction } from "express";
+import { connection } from 'mongoose';
+import {type} from "os";
 
 export abstract class CoreValidator
 {
@@ -6,6 +8,8 @@ export abstract class CoreValidator
      * This method should returns an array with credentials for each params of sends in request
      */
     protected abstract validator();
+
+    private emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     /**
      *
@@ -17,16 +21,79 @@ export abstract class CoreValidator
     {
         // array of objects
         let props = this.makePropsArray( this.validator() );
+        console.log('props', props);
 
         // object with properties
         let requestData = this.getAllFromRequest( request );
+        console.log('requestData', requestData);
 
-        for(const prop of props){
+        let errors = [];
 
-        }
+        this.checkNextProp(errors, props, requestData, () => {
+            if(errors.length){
+                response.send({
+                    status: 400,
+                    errors: errors
+                });
+            } else {
+                next();
+            }
+        });
 
-        next && next();
     };
+
+    private checkNextProp(errors, props, requestData, callback, index = 0)
+    {
+        const prop = props[index];
+        if(typeof prop !== 'undefined'){
+            const field = requestData[prop.field];
+            if(typeof field !== 'undefined'){
+                if(prop.type === 'string' || prop.type === 'email')
+                {
+                    if(typeof field === 'string') {
+                        if(prop.type === 'email' && !field.match(this.emailRegex)){
+                            errors.push(`${prop.field} is not an email`);
+                        }
+                        if(typeof prop.min === 'number' && field.length < prop.min){
+                            errors.push(`${prop.field} is too short (at leas ${prop.min} characters)`);
+                        }
+                        if(typeof prop.max === 'number' && field.length > prop.max){
+                            errors.push(`${prop.field} is too long (max ${prop.max} characters)`);
+                        }
+                    } else {
+                        errors.push(`${prop.field} is not a string`);
+                    }
+                }
+
+                if(prop.unique) {
+                    this.findInDatabase(prop, prop.field, field, exists => {
+                        if(exists){
+                            errors.push(`${prop.field} already exists`);
+                        }
+                        this.checkNextProp(errors, props, requestData, callback, index+1);
+                    });
+                } else {
+                    this.checkNextProp(errors, props, requestData, callback, index+1);
+                }
+            } else {
+                if(prop.required){
+                    errors.push(`${prop.field} is required`)
+                }
+                this.checkNextProp(errors, props, requestData, callback, index+1);
+            }
+        } else {
+            callback();
+        }
+    }
+
+    private findInDatabase(prop, name, field, callback)
+    {
+        let query:any = {};
+        query[name] = field;
+        connection.collection(prop.unique).find(query).toArray((err, results) => {
+            callback(results.length);
+        });
+    }
 
     protected makePropsArray(props)
     {

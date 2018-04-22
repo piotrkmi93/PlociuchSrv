@@ -101,7 +101,7 @@ function make(what, bundleName, elementName)
 
     switch (what) {
         case 'bundle':
-            valid(bundleName, undefined, undefined,makeBundle);
+            valid(bundleName);
             break;
         case 'controller':
             valid(bundleName, elementName, what);
@@ -189,7 +189,6 @@ function valid(bundle, name, element, next)
                         const elementInName = element === 'Model' ? '' : element;
                         const elementPath = `${dirPath}/${elementName + elementInName}.ts`;
                         if (!fs.existsSync(elementPath)) {
-                            // next(name, elementName, elementPath);
                             write(
                                 element.toLowerCase(),
                                 name[0].toUpperCase() + name.slice(1),

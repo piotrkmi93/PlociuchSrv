@@ -16,7 +16,7 @@ export default class API_UserRouter extends CoreRouter
 
     private routes(): void
     {
-        this.router.post('/register/:frompath', RegisterValidator.validate, this.userController.register);
+        this.router.post('/register', RegisterValidator.validate, this.userController.register);
         // this.router.post('/login', LoginValidator.validate, this.userController.login);
         // this.router.post('/logout', LogoutValidator.validate, this.userController.logout);
     }
