@@ -1,0 +1,233 @@
+/**
+ * @author Piotr Kmiecik
+ * @date 24.04.2018
+ *
+ * Little helper program based on artisan from Laravel PHP framework
+ *
+ * Commands:
+ * help
+ * make
+ * make bundle {bname}
+ * make controller {bundle} {bname}
+ * make model {bundle} {bname}
+ * make validator {bundle} {bname}
+ * make router {bundle} {bname}
+ *
+ */
+
+var fs = require('fs');
+var args = process.argv.slice(2);
+
+const templates = {
+    controller: "import { Request, Response } from 'express';\n" +
+                "import {bname} from '../models/{bname}';\n" +
+                "\n" +
+                "export class {bname}Controller\n" +
+                "{\n" +
+                "\tpublic index(request: Request, response: Response): void\n" +
+                "\t{\n" +
+                "\t\t// todo: your magic\n" +
+                "\t}\n" +
+                "}",
+    validator:  "import { CoreValidator } from '../../CoreBundle/validator/CoreValidator';\n" +
+                "import { Request, Response, NextFunction } from 'express';\n" +
+                "\n" +
+                "export class {bname}Validator extends CoreValidator\n" +
+                "{\n" +
+                "\tpublic static validate(request: Request, response: Response, next: NextFunction)\n" +
+                "\t{\n" +
+                "\t\tconst validator = new {bname}Validator();\n" +
+                "\t\tvalidator.baseValidate(request, response, next);\n" +
+                "\t}\n" +
+                "\n" +
+                "\tvalidator()\n" +
+                "\t{\n" +
+                "\t\treturn {\n" +
+                "\t\t\t// todo: your magic\n" +
+                "\t\t};\n" +
+                "\t}\n" +
+                "}",
+    router:     "import {{bname}Controller} from '../controllers/{bname}Controller';\n" +
+                "import {CoreRouter} from '../../CoreBundle/router/CoreRouter';\n" +
+                "\n" +
+                "export default class {bname}Router extends CoreRouter\n" +
+                "{\n" +
+                "\tprivate {sname}Controller: {bname}Controller;\n" +
+                "\n" +
+                "\tpublic constructor()\n" +
+                "\t{\n" +
+                "\t\tsuper();\n" +
+                "\t\tthis.{sname}Controller = new {bname}Controller();\n" +
+                "\n" +
+                "\t\tthis.routes();\n" +
+                "\t}" +
+                "\n" +
+                "\tprivate routes():void\n" +
+                "\t{\n" +
+                "\t\tthis.router.get('/', this.{sname}Controller.index);\n" +
+                "\t\t// todo: your magic\n" +
+                "\t}\n" +
+                "}",
+    model:      "import { Schema, model } from 'mongoose'\n" +
+                "\n" +
+                "const {bname}Schema: Schema = new Schema({\n" +
+                "\t// todo: your magic\n" +
+                "});\n" +
+                "\n" +
+                "export default model('{bname}', {bname}Schema);"
+};
+
+try {
+    switch (args[0]) {
+        case 'make':
+            make(args[1], args[2], args[3]);
+            break;
+        case 'help':
+        default:
+            help();
+    }
+} catch (exception) {
+
+    console.log(exception);
+}
+
+function make(what, bundleName, elementName)
+{
+    what = what.toLowerCase();
+    bundleName = bundleName.toLowerCase();
+    if(elementName) {
+        elementName = elementName.toLowerCase();
+    }
+
+    switch (what) {
+        case 'bundle':
+            valid(bundleName, undefined, undefined,makeBundle);
+            break;
+        case 'controller':
+            valid(bundleName, elementName, what);
+            break;
+        case 'model':
+            valid(bundleName, elementName, what);
+            break;
+        case 'validator':
+            valid(bundleName, elementName, what);
+            break;
+        case 'router':
+            valid(bundleName, elementName, what);
+            break;
+        default:
+            help();
+    }
+}
+
+function makeBundle(bundleName, bundlePath)
+{
+    fs.mkdirSync(`${bundlePath}`);
+    console.log(`${bundlePath} created`);
+
+    fs.mkdirSync(`${bundlePath}/controllers`);
+    fs.mkdirSync(`${bundlePath}/models`);
+    fs.mkdirSync(`${bundlePath}/validators`);
+    fs.mkdirSync(`${bundlePath}/routers`);
+
+    make('controller', bundleName, bundleName);
+    make('model', bundleName, bundleName);
+    make('router', bundleName, bundleName);
+
+}
+
+function write(element, bname, sname, path)
+{
+    console.log(`${path} created`);
+    fs.writeFileSync(path, fill(bname, sname, templates[element]));
+
+    if(element === 'router'){
+        updateRoutersImport(
+            bname + element[0].toUpperCase() + element.slice(1),
+            path.replace('.ts', '')
+                .replace('/src', '')
+        );
+    }
+}
+
+function updateRoutersImport(name, path)
+{
+    const route = name.toLowerCase().replace('router', '');
+
+    let server = fs.readFileSync('./src/server.ts').toString();
+    const importsIndex = server.indexOf("// import routes");
+    const insertImportIndex = (importsIndex !== -1) ? (importsIndex+17) : 0;
+
+    server = [server.slice(0, insertImportIndex),
+             `import ${name} from '${path}';`,
+             server.slice(insertImportIndex)].join('');
+
+    const routesIndex = server.indexOf("routes(): void");
+    const insertRoutesIndex = routesIndex + server.slice(routesIndex).indexOf("{") + 2;
+
+    server = [server.slice(0, insertRoutesIndex),
+        `\t\tthis.app.use('/${route}/', ${name}.getRouter());`,
+        server.slice(insertRoutesIndex)].join('');
+
+    fs.writeFileSync('./src/server.ts', server);
+    console.log('Server.ts updated');
+
+}
+
+function valid(bundle, name, element, next)
+{
+    if(typeof bundle === 'string' && bundle.length){
+        bundle = bundle[0].toUpperCase() + bundle.slice(1);
+        const bundlePath = `./src/bundles/${bundle}Bundle`;
+        if(typeof name !== 'undefined') {
+            if (typeof name === 'string' && name.length) {
+                if (fs.existsSync(bundlePath)) {
+                    const dirPath = `${bundlePath}/${element}s`;
+                    element = element[0].toUpperCase() + element.slice(1);
+                    if (fs.existsSync(dirPath)) {
+                        const elementName = name[0].toUpperCase() + name.slice(1);
+                        const elementInName = element === 'Model' ? '' : element;
+                        const elementPath = `${dirPath}/${elementName + elementInName}.ts`;
+                        if (!fs.existsSync(elementPath)) {
+                            // next(name, elementName, elementPath);
+                            write(
+                                element.toLowerCase(),
+                                name[0].toUpperCase() + name.slice(1),
+                                name,
+                                elementPath
+                            );
+                        } else {
+                            throw(`${element} '${elementName}' already exists`);
+                        }
+                    } else {
+                        fs.mkdirSync(dirPath);
+                        valid(bundle, name, element, next);
+                    }
+                } else {
+                    throw(`bundle '${bundle}' not exists`);
+                }
+            } else {
+                throw(`${element} name have to be string type with minimum one character`);
+            }
+        } else {
+            if (!fs.existsSync(bundlePath)) {
+                makeBundle(bundle, bundlePath);
+            } else {
+                throw(`bundle '${bundle}' already exists`);
+            }
+        }
+    } else {
+        throw('bundle name have to be string type with minimum one character');
+    }
+}
+
+function help()
+{
+    console.log('help');
+}
+
+function fill(bname, sname, text)
+{
+    return text.replace(/{bname}/g, bname)
+               .replace(/{sname}/g, sname);
+}
