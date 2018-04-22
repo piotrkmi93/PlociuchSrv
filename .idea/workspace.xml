@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56f7962b-09a1-4484-8db8-c37489c62deb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/artisan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bundles/CoreBundle/validator/CoreValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/bundles/CoreBundle/validator/CoreValidator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bundles/UserBundle/routers/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/bundles/UserBundle/routers/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,8 +61,8 @@
       <file leaf-file-name="api.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bundles/UserBundle/routers/api.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="54" lean-forward="true" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+            <state relative-caret-position="306">
+              <caret line="18" column="64" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="64" />
               <folding>
                 <element signature="e#0#68#0" expanded="true" />
               </folding>
@@ -73,11 +70,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterValidator.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" selection-start-column="6" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterValidator.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bundles/UserBundle/validators/RegisterValidator.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="153">
+              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
               <folding>
                 <element signature="e#0#73#0" expanded="true" />
               </folding>
@@ -126,7 +132,6 @@
         <option value="$PROJECT_DIR$/src/bundles/UserBundle/controllers/UserController.ts" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/build/.gitignore" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/bundles/UserBundle/routes.ts" />
         <option value="$PROJECT_DIR$/src/bundles/CoreBundle/router/CoreRouter.ts" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -136,6 +141,7 @@
         <option value="$PROJECT_DIR$/src/bundles/UserBundle/routers/api.ts" />
         <option value="$PROJECT_DIR$/src/bundles/CoreBundle/validator/CoreValidator.ts" />
         <option value="$PROJECT_DIR$/src/bundles/UserBundle/validators/RegisterValidator.ts" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -265,12 +271,12 @@
       <option name="presentableId" value="Default" />
       <updated>1524396660655</updated>
       <workItem from="1524396661864" duration="16085000" />
-      <workItem from="1524413198103" duration="16095000" />
+      <workItem from="1524413198103" duration="16223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32180000" />
+    <option name="totallyTimeSpent" value="32308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2513" height="1096" extended-state="6" />
@@ -377,13 +383,6 @@
         <state relative-caret-position="-1581" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -479,16 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bundles/UserBundle/routers/api.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="54" lean-forward="true" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bundles/CoreBundle/validator/CoreValidator.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -501,11 +490,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bundles/UserBundle/validators/RegisterValidator.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="9" selection-end-column="5" />
+        <state relative-caret-position="153">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding>
             <element signature="e#0#73#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bundles/UserBundle/routers/api.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="64" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
