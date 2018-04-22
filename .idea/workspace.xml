@@ -271,12 +271,12 @@
       <option name="presentableId" value="Default" />
       <updated>1524396660655</updated>
       <workItem from="1524396661864" duration="16085000" />
-      <workItem from="1524413198103" duration="16223000" />
+      <workItem from="1524413198103" duration="16310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32308000" />
+    <option name="totallyTimeSpent" value="32395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2513" height="1096" extended-state="6" />
@@ -287,9 +287,9 @@
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info anchor="right" id="Graph Database" order="0" />
-      <window_info anchor="right" id="Terminal" order="4" visible="true" weight="0.32463294" />
+      <window_info active="true" anchor="right" id="Terminal" order="4" visible="true" weight="0.32463294" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.110929854" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.110929854" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Graph Database Console" order="3" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
