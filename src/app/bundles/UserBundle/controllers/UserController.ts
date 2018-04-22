@@ -6,7 +6,11 @@ export class UserController
 
     public register(request: Request, response: Response): void
     {
-        response.send('ok');
+        response.send({
+            login: request.body.login,
+            email: request.body.email,
+            password: request.body.password
+        });
     }
 
 }

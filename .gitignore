@@ -1,6 +1,6 @@
-build/
-node_modules/
-package-lock.json/
+/build
+/node_modules
+/package-lock.json
 
 
 # Created by https://www.gitignore.io/api/intellij

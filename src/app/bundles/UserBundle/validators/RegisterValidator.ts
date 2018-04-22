@@ -1,4 +1,4 @@
-import { CoreValidator } from '../../CoreBundle/validator/CoreValidator';
+import { CoreValidator } from '../../../../vendor/validator/CoreValidator';
 import { Request, Response, NextFunction } from 'express';
 
 export class RegisterValidator extends CoreValidator

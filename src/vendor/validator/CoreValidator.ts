@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { connection } from 'mongoose';
-import {type} from "os";
+import mergeRequestData from '../helpers/mergeRequestData';
 
 export abstract class CoreValidator
 {
@@ -24,7 +24,8 @@ export abstract class CoreValidator
         console.log('props', props);
 
         // object with properties
-        let requestData = this.getAllFromRequest( request );
+        // let requestData = this.getAllFromRequest( request );
+        let requestData = mergeRequestData( request );
         console.log('requestData', requestData);
 
         let errors = [];
@@ -138,19 +139,19 @@ export abstract class CoreValidator
     }
 
 
-    private getAllFromRequest(request: Request)
-    {
-        let all:any = {};
-        for(const prop in request.body){
-            all[prop] = request.body[prop];
-        }
-        for(const prop in request.params){
-            all[prop] = request.params[prop];
-        }
-        for(const prop in request.query){
-            all[prop] = request.query[prop];
-        }
-        return all;
-    }
+    // private getAllFromRequest(request: Request)
+    // {
+    //     let all:any = {};
+    //     for(const prop in request.body){
+    //         all[prop] = request.body[prop];
+    //     }
+    //     for(const prop in request.params){
+    //         all[prop] = request.params[prop];
+    //     }
+    //     for(const prop in request.query){
+    //         all[prop] = request.query[prop];
+    //     }
+    //     return all;
+    // }
 
 }

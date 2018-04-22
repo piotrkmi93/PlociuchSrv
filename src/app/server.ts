@@ -7,7 +7,7 @@ import * as helmet from 'helmet';
 import * as cors from 'cors';
 
 // import routes
-import API_UserRouter from './bundles/UserBundle/routers/api';
+import UserAPIRouter from './bundles/UserBundle/routers/api';
 
 
 // server
@@ -37,11 +37,15 @@ class Server
         this.app.use(compression());
         this.app.use(helmet());
         this.app.use(cors());
+
+        // your magic
+        // todo socket config
     }
 
+    // connect your bundles
     private routes(): void
     {
-        this.app.use('/api/users/', API_UserRouter.getRouter());
+        this.app.use('/api/users/', UserAPIRouter.getRouter());
 	}
 }
 

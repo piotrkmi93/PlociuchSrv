@@ -1,7 +1,7 @@
 import * as debug from 'debug';
 import * as http from 'http';
 
-import Server from './server';
+import Server from './app/server';
 
 debug('ts-express:server');
 

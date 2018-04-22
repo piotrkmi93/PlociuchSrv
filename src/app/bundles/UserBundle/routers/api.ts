@@ -1,8 +1,8 @@
 import { RegisterValidator } from '../validators/RegisterValidator';
 import {UserController} from '../controllers/UserController';
-import {CoreRouter} from '../../CoreBundle/router/CoreRouter';
+import {CoreRouter} from '../../../../vendor/router/CoreRouter';
 
-export default class API_UserRouter extends CoreRouter
+export default class UserAPIRouter extends CoreRouter
 {
     private userController: UserController;
 
