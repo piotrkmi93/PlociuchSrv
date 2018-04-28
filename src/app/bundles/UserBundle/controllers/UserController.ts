@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
-import User from '../models/User';
+import {CoreController} from "../../../../vendor/controller/CoreController";
+// import User from '../models/User';
 
-export class UserController
+export class UserController extends CoreController
 {
 
     public register(request: Request, response: Response): void

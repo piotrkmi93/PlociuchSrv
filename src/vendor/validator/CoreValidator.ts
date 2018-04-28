@@ -7,8 +7,13 @@ export abstract class CoreValidator
     /**
      * This method should returns an array with credentials for each params of sends in request
      */
-    protected abstract validator();
+    protected abstract validator(): any;
 
+    /**
+     * Email regex
+     *
+     * @type {RegExp}
+     */
     private emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     /**
@@ -17,7 +22,7 @@ export abstract class CoreValidator
      * @param {e.Response} response
      * @param {e.NextFunction} next
      */
-    protected baseValidate(request: Request, response: Response, next: NextFunction): void
+    public validate(request: Request, response: Response, next: NextFunction): void
     {
         // array of objects
         let props = this.makePropsArray( this.validator() );

@@ -5,15 +5,17 @@ import * as compression from 'compression';
 import * as logger from 'morgan';
 import * as helmet from 'helmet';
 import * as cors from 'cors';
+import {databaseConfig} from "../config/database";
 
-// import routes
-import UserAPIRouter from './bundles/UserBundle/routers/api';
+// import bundles
+import UserBundle from './bundles/UserBundle/UserBundle';
 
 
 // server
 class Server
 {
-    private MONGO_URI = 'mongodb://localhost:27017/plociuch';
+    // private MONGO_URI = 'mongodb://localhost:27017/plociuch';
+    private MONGO_URI = databaseConfig;
 
     public app: express.Application;
 
@@ -45,7 +47,7 @@ class Server
     // connect your bundles
     private routes(): void
     {
-        this.app.use('/api/users/', UserAPIRouter.getRouter());
+        UserBundle.init( this.app );
 	}
 }
 
