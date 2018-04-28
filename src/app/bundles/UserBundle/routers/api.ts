@@ -1,8 +1,8 @@
 import {CoreRouter} from '../../../../vendor/router/CoreRouter';
 
-export default class UserAPIRouter extends CoreRouter
+export class UserAPIRouter extends CoreRouter
 {
-    routes(): void
+    routes()
     {
         this.post('/register', 'UserController@register', 'RegisterValidator');
         // this.post('/register', 'UserController@login', 'LoginValidator');

@@ -4,6 +4,8 @@ import {CoreController} from "../controller/CoreController";
 
 export class CoreRouter
 {
+    private controllersCache:any = {};
+    private validatorsCache:any = {};
 
     protected router: Router;
     protected bundle: string;
@@ -52,12 +54,22 @@ export class CoreRouter
             controller: CoreController = undefined;
 
         if(typeof validatorName !== 'undefined'){
-            const importedValidator = await import('../../app/bundles/' + this.bundle + '/validators/' + validatorName);
-            validator = new importedValidator[validatorName]();
+            if(typeof this.validatorsCache[validatorName] !== 'undefined'){
+                validator = this.validatorsCache[validatorName];
+            } else {
+                const importedValidator = await import('../../app/bundles/' + this.bundle + '/validators/' + validatorName);
+                validator = new importedValidator[validatorName]();
+                this.validatorsCache[validatorName] = validator;
+            }
         }
 
-        const importedController = await import('../../app/bundles/' + this.bundle + '/controllers/' + controllerName);
-        controller = new importedController[controllerName]();
+        if(typeof this.controllersCache[controllerName] !== 'undefined'){
+            controller = this.controllersCache[controllerName];
+        } else {
+            const importedController = await import('../../app/bundles/' + this.bundle + '/controllers/' + controllerName);
+            controller = new importedController[controllerName]();
+            this.controllersCache[controllerName] = controller;
+        }
 
         this.router[method](
             path,

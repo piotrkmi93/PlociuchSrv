@@ -16,30 +16,37 @@
  */
 
 var fs = require('fs');
+var exec = require('child_process').exec;
 var args = process.argv.slice(2);
 
 const templates = {
+    bundle:     "import {Application} from 'express';\n" +
+                "import {{bname}Router} from './routers/{bname}Router';\n" +
+                "\n" +
+                "export default class {bname}Bundle\n" +
+                "{\n" +
+                "\tpublic static init(app: Application)\n" +
+                "\t{\n" +
+                "\t\tapp.use('/{sname}/', {bname}Router.getRouter(this.name));\n" +
+                "\t}\n" +
+                "}",
+
     controller: "import { Request, Response } from 'express';\n" +
+                "import {CoreController} from '../../../../vendor/controller/CoreController';\n" +
                 "import {bname} from '../models/{bname}';\n" +
                 "\n" +
-                "export class {bname}Controller\n" +
+                "export class {bname}Controller extends CoreController\n" +
                 "{\n" +
-                "\tpublic index(request: Request, response: Response): void\n" +
+                "\tpublic index(request: Request, response: Response)\n" +
                 "\t{\n" +
                 "\t\t// todo: your magic\n" +
                 "\t}\n" +
                 "}",
+
     validator:  "import { CoreValidator } from '../../CoreBundle/validator/CoreValidator';\n" +
-                "import { Request, Response, NextFunction } from 'express';\n" +
                 "\n" +
                 "export class {bname}Validator extends CoreValidator\n" +
                 "{\n" +
-                "\tpublic static validate(request: Request, response: Response, next: NextFunction)\n" +
-                "\t{\n" +
-                "\t\tconst validator = new {bname}Validator();\n" +
-                "\t\tvalidator.baseValidate(request, response, next);\n" +
-                "\t}\n" +
-                "\n" +
                 "\tvalidator()\n" +
                 "\t{\n" +
                 "\t\treturn {\n" +
@@ -47,27 +54,18 @@ const templates = {
                 "\t\t};\n" +
                 "\t}\n" +
                 "}",
-    router:     "import {{bname}Controller} from '../controllers/{bname}Controller';\n" +
-                "import {CoreRouter} from '../../CoreBundle/router/CoreRouter';\n" +
+
+    router:     "import {CoreRouter} from '../../../../vendor/router/CoreRouter';\n" +
                 "\n" +
-                "export default class {bname}Router extends CoreRouter\n" +
+                "export class {bname}Router extends CoreRouter\n" +
                 "{\n" +
-                "\tprivate {sname}Controller: {bname}Controller;\n" +
-                "\n" +
-                "\tpublic constructor()\n" +
+                "\troutes()\n" +
                 "\t{\n" +
-                "\t\tsuper();\n" +
-                "\t\tthis.{sname}Controller = new {bname}Controller();\n" +
-                "\n" +
-                "\t\tthis.routes();\n" +
-                "\t}" +
-                "\n" +
-                "\tprivate routes():void\n" +
-                "\t{\n" +
-                "\t\tthis.router.get('/', this.{sname}Controller.index);\n" +
+                "\t\tthis.get('/', '{bname}Controller@index');\n" +
                 "\t\t// todo: your magic\n" +
                 "\t}\n" +
                 "}",
+
     model:      "import { Schema, model } from 'mongoose'\n" +
                 "\n" +
                 "const {bname}Schema: Schema = new Schema({\n" +
@@ -81,6 +79,13 @@ try {
     switch (args[0]) {
         case 'make':
             make(args[1], args[2], args[3]);
+            break;
+        case 'serve':
+            exec('tsc && node ./build/index.js', (error, stdout, stderr) => {
+                error && console.log(error);
+                stdout && console.log(stdout);
+                stderr && console.log(stderr);
+            });
             break;
         case 'help':
         default:
@@ -104,14 +109,8 @@ function make(what, bundleName, elementName)
             valid(bundleName);
             break;
         case 'controller':
-            valid(bundleName, elementName, what);
-            break;
         case 'model':
-            valid(bundleName, elementName, what);
-            break;
         case 'validator':
-            valid(bundleName, elementName, what);
-            break;
         case 'router':
             valid(bundleName, elementName, what);
             break;
@@ -134,6 +133,10 @@ function makeBundle(bundleName, bundlePath)
     make('model', bundleName, bundleName);
     make('router', bundleName, bundleName);
 
+    write('bundle',
+        bundleName,
+        bundleName.toLowerCase(),
+        bundlePath + "/" + bundleName + "Bundle.ts");
 }
 
 function write(element, bname, sname, path)
@@ -142,7 +145,21 @@ function write(element, bname, sname, path)
     fs.writeFileSync(path, fill(bname, sname, templates[element]));
 
     if(element === 'router'){
-        updateRoutersImport(
+        const bundleName = path.slice(path.indexOf("/bundles/") + 9, path.indexOf("/routers/"));
+        const bundlePath = path.slice(0, path.indexOf("routers/")) + bundleName + '.ts';
+
+        if(fs.existsSync(bundlePath)){
+            updateBundleRouters(
+                bundlePath,
+                bundleName,
+                bname,
+                sname
+            )
+        }
+    }
+
+    if(element === 'bundle'){
+        updateBundlesImport(
             bname + element[0].toUpperCase() + element.slice(1),
             path.replace('.ts', '')
                 .replace('/src', '')
@@ -150,35 +167,52 @@ function write(element, bname, sname, path)
     }
 }
 
-function updateRoutersImport(name, path)
+function updateBundleRouters(path, name, bname, sname)
 {
-    const route = name.toLowerCase().replace('router', '');
+    let bundle = fs.readFileSync(path).toString();
+    const insertImportIndex = bundle.indexOf('\n\n');
 
-    let server = fs.readFileSync('./src/server.ts').toString();
-    const importsIndex = server.indexOf("// import routes");
+    bundle = [bundle.slice(0, insertImportIndex),
+              `\nimport {${bname}Router} from './routers/${bname}Router';`,
+              bundle.slice(insertImportIndex)].join('');
+
+    const routersIndex = bundle.indexOf("public static init(app: Application)");
+    const insertRoutersIndex = routersIndex + bundle.slice(routersIndex).indexOf("{") + 2;
+
+    bundle = [bundle.slice(0, insertRoutersIndex),
+        `\t\tapp.use('/${sname}/', ${bname}Router.getRouter(this.name));\n`,
+        bundle.slice(insertRoutersIndex)].join('');
+
+    fs.writeFileSync(path, bundle);
+    console.log(name + ' updated');
+}
+
+function updateBundlesImport(name, path)
+{
+    let server = fs.readFileSync('./src/app/server.ts').toString();
+    const importsIndex = server.indexOf("// import bundles");
     const insertImportIndex = (importsIndex !== -1) ? (importsIndex+17) : 0;
 
     server = [server.slice(0, insertImportIndex),
-             `import ${name} from '${path}';`,
+             `\nimport ${name} from '${path.replace('/app', '')}';`,
              server.slice(insertImportIndex)].join('');
 
-    const routesIndex = server.indexOf("routes(): void");
-    const insertRoutesIndex = routesIndex + server.slice(routesIndex).indexOf("{") + 2;
+    const bundlesIndex = server.indexOf("bundles(): void");
+    const insertBundlesIndex = bundlesIndex + server.slice(bundlesIndex).indexOf("{") + 1;
 
-    server = [server.slice(0, insertRoutesIndex),
-        `\t\tthis.app.use('/${route}/', ${name}.getRouter());`,
-        server.slice(insertRoutesIndex)].join('');
+    server = [server.slice(0, insertBundlesIndex),
+        `\n\t\t${name}.init(this.app);`,
+        server.slice(insertBundlesIndex)].join('');
 
-    fs.writeFileSync('./src/server.ts', server);
+    fs.writeFileSync('./src/app/server.ts', server);
     console.log('Server.ts updated');
-
 }
 
 function valid(bundle, name, element, next)
 {
     if(typeof bundle === 'string' && bundle.length){
         bundle = bundle[0].toUpperCase() + bundle.slice(1);
-        const bundlePath = `./src/bundles/${bundle}Bundle`;
+        const bundlePath = `./src/app/bundles/${bundle}Bundle`;
         if(typeof name !== 'undefined') {
             if (typeof name === 'string' && name.length) {
                 if (fs.existsSync(bundlePath)) {

@@ -2,9 +2,9 @@ const nodeMailerConfig = {
 
     // transporter options
 
-    service:    'Gmail',
-    user:       'plociuch.srv@gmail.com',
-    password:   'plociuch!@#'
+    service:    '',
+    user:       '',
+    password:   ''
 
 };
 

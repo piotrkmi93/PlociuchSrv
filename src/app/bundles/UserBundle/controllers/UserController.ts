@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
-import {CoreController} from "../../../../vendor/controller/CoreController";
+import {CoreController} from '../../../../vendor/controller/CoreController';
 // import User from '../models/User';
 
 export class UserController extends CoreController
 {
 
-    public register(request: Request, response: Response): void
+    public register(request: Request, response: Response)
     {
         response.send({
             login: request.body.login,

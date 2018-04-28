@@ -14,7 +14,6 @@ import UserBundle from './bundles/UserBundle/UserBundle';
 // server
 class Server
 {
-    // private MONGO_URI = 'mongodb://localhost:27017/plociuch';
     private MONGO_URI = databaseConfig;
 
     public app: express.Application;
@@ -24,7 +23,7 @@ class Server
         console.log('building server');
         this.app = express();
         this.config();
-        this.routes();
+        this.bundles();
     }
 
     public config(): void
@@ -45,7 +44,7 @@ class Server
     }
 
     // connect your bundles
-    private routes(): void
+    private bundles(): void
     {
         UserBundle.init( this.app );
 	}

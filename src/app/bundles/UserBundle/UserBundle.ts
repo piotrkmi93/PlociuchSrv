@@ -1,5 +1,5 @@
-import {Application} from "express";
-import UserAPIRouter from "./routers/api";
+import {Application} from 'express';
+import {UserAPIRouter} from './routers/api';
 
 export default class UserBundle
 {
