@@ -1,6 +1,7 @@
 /build
 /node_modules
 /package-lock.json
+/src/config/mail.ts
 
 
 # Created by https://www.gitignore.io/api/intellij

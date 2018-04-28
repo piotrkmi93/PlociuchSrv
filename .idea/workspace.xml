@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56f7962b-09a1-4484-8db8-c37489c62deb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/artisan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bundles/UserBundle/controllers/UserController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/mail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/mail.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/router/CoreRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/router/CoreRouter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/validator/CoreValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/validator/CoreValidator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,11 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mail.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mail.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config/mail.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -82,7 +82,6 @@
         <option value="$PROJECT_DIR$/src/test.ts" />
         <option value="$PROJECT_DIR$/src/bundles/CoreBundle/validator/CoreValidator.ts" />
         <option value="$PROJECT_DIR$/src/bundles/UserBundle/validators/RegisterValidator.ts" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/bundles/UserBundle/routers/api.ts" />
         <option value="$PROJECT_DIR$/src/server.ts" />
         <option value="$PROJECT_DIR$/vendor/functions/mergeRequestData.ts" />
@@ -110,6 +109,7 @@
         <option value="$PROJECT_DIR$/artisan" />
         <option value="$PROJECT_DIR$/src/app/bundles/TestBundle/TestBundle.ts" />
         <option value="$PROJECT_DIR$/src/config/mail.ts" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -200,12 +200,12 @@
       <updated>1524396660655</updated>
       <workItem from="1524396661864" duration="16085000" />
       <workItem from="1524413198103" duration="19958000" />
-      <workItem from="1524922112166" duration="18589000" />
+      <workItem from="1524922112166" duration="18679000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54632000" />
+    <option name="totallyTimeSpent" value="54722000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2513" height="1096" extended-state="6" />
@@ -332,13 +332,6 @@
     <entry file="file://$PROJECT_DIR$/build/bundles/CoreBundle/validator/CoreValidator.js" />
     <entry file="file://$PROJECT_DIR$/src/test.ts" />
     <entry file="file://$PROJECT_DIR$/src/bundles/PostBundle/routers/PostRouter.ts" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/express/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="622">
@@ -542,6 +535,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
         </state>
       </provider>
     </entry>
