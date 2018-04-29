@@ -1,7 +1,7 @@
 import * as nodeMailer from 'nodemailer';
 import {nodeMailerConfig} from '../../config/mail';
 
-export class CoreMailer
+export default class CoreMailer
 {
 
     /**

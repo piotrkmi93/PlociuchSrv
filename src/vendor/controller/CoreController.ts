@@ -1,4 +1,4 @@
-export class CoreController
+export default class CoreController
 {
     // silence is gold ...
 }

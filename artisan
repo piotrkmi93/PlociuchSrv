@@ -32,7 +32,7 @@ const templates = {
                 "}",
 
     controller: "import { Request, Response } from 'express';\n" +
-                "import {CoreController} from '../../../../vendor/controller/CoreController';\n" +
+                "import CoreController from '../../../../vendor/controller/CoreController';\n" +
                 "import {bname} from '../models/{bname}';\n" +
                 "\n" +
                 "export class {bname}Controller extends CoreController\n" +
@@ -43,7 +43,7 @@ const templates = {
                 "\t}\n" +
                 "}",
 
-    validator:  "import { CoreValidator } from '../../CoreBundle/validator/CoreValidator';\n" +
+    validator:  "import CoreValidator from '../../../../vendor/validator/CoreValidator';\n" +
                 "\n" +
                 "export class {bname}Validator extends CoreValidator\n" +
                 "{\n" +
@@ -55,7 +55,7 @@ const templates = {
                 "\t}\n" +
                 "}",
 
-    router:     "import {CoreRouter} from '../../../../vendor/router/CoreRouter';\n" +
+    router:     "import CoreRouter from '../../../../vendor/router/CoreRouter';\n" +
                 "\n" +
                 "export class {bname}Router extends CoreRouter\n" +
                 "{\n" +

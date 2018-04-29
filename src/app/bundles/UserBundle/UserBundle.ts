@@ -1,10 +1,10 @@
 import {Application} from 'express';
-import {UserAPIRouter} from './routers/api';
+import {UserRouter} from './routers/UserRouter';
 
 export default class UserBundle
 {
-    public static init(app: Application)
-    {
-        app.use('/api/users/', UserAPIRouter.getRouter( this.name ));
-    }
+	public static init(app: Application)
+	{
+		app.use('/user/', UserRouter.getRouter(this.name));
+	}
 }

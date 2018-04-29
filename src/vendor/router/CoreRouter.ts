@@ -1,8 +1,8 @@
 import { Request as RQ, Response as RS, NextFunction as NX, Router } from "express";
-import {CoreValidator} from "../validator/CoreValidator";
-import {CoreController} from "../controller/CoreController";
+import CoreValidator from "../validator/CoreValidator";
+import CoreController from "../controller/CoreController";
 
-export class CoreRouter
+export default class CoreRouter
 {
     private controllersCache:any = {};
     private validatorsCache:any = {};

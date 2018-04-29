@@ -31,21 +31,31 @@ const UserSchema: Schema = new Schema({
         type: String,
         default: '',
         required: true
+    },
+
+    activation_code: {
+        type: String
+    },
+
+    is_active: {
+        type: Boolean,
+        default: false
     }
 
 });
 
 UserSchema.pre('save', function(next) {
-    let user:any = this,
-        date:Date = new Date();
-    user.updated = date;
-    if(!user.created) {
-        user.created = date;
-        genSalt(10, (err, salt) => hash(user.password, salt, (err, hash) => {
+    let user:any = this;
+
+    genSalt(10)
+        .then(hash => {
+            console.log(hash);
             user.password = hash;
             next();
-        }));
-    }
+        })
+        .catch(error => {
+            console.log(error);
+        });
 });
 
 UserSchema.methods.compare = function (password) {

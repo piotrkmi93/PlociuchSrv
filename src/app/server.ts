@@ -46,7 +46,7 @@ class Server
     // connect your bundles
     private bundles(): void
     {
-        UserBundle.init( this.app );
+        UserBundle.init(this.app);
 	}
 }
 

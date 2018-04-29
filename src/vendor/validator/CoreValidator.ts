@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import { connection } from 'mongoose';
 import mergeRequestData from '../helpers/mergeRequestData';
 
-export abstract class CoreValidator
+export default abstract class CoreValidator
 {
     /**
      * This method should returns an array with credentials for each params of sends in request
@@ -26,12 +26,10 @@ export abstract class CoreValidator
     {
         // array of objects
         let props = this.makePropsArray( this.validator() );
-        console.log('props', props);
 
         // object with properties
         // let requestData = this.getAllFromRequest( request );
         let requestData = mergeRequestData( request );
-        console.log('requestData', requestData);
 
         let errors = [];
 
