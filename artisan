@@ -21,7 +21,7 @@ var args = process.argv.slice(2);
 
 const templates = {
     bundle:     "import {Application} from 'express';\n" +
-                "import {{bname}Router} from './routers/{bname}Router';\n" +
+                "import {bname}Router from './routers/{bname}Router';\n" +
                 "\n" +
                 "export default class {bname}Bundle\n" +
                 "{\n" +
@@ -57,7 +57,7 @@ const templates = {
 
     router:     "import CoreRouter from '../../../../vendor/router/CoreRouter';\n" +
                 "\n" +
-                "export class {bname}Router extends CoreRouter\n" +
+                "export default class {bname}Router extends CoreRouter\n" +
                 "{\n" +
                 "\troutes()\n" +
                 "\t{\n" +
@@ -173,7 +173,7 @@ function updateBundleRouters(path, name, bname, sname)
     const insertImportIndex = bundle.indexOf('\n\n');
 
     bundle = [bundle.slice(0, insertImportIndex),
-              `\nimport {${bname}Router} from './routers/${bname}Router';`,
+              `\nimport ${bname}Router from './routers/${bname}Router';`,
               bundle.slice(insertImportIndex)].join('');
 
     const routersIndex = bundle.indexOf("public static init(app: Application)");

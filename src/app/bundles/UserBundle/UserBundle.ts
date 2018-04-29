@@ -1,5 +1,5 @@
 import {Application} from 'express';
-import {UserRouter} from './routers/UserRouter';
+import UserRouter from './routers/UserRouter';
 
 export default class UserBundle
 {

@@ -5,11 +5,11 @@
       <change afterPath="$PROJECT_DIR$/src/vendor/helpers/generateRandomString.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/artisan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/controllers/UserController.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/models/User.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/api.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/validators/RegisterValidator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bundles/UserBundle/controllers/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bundles/UserBundle/models/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/UserRouter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/validators/RegisterValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bundles/UserBundle/validators/RegisterValidator.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/mail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/mail.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vendor/controller/CoreController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/controller/CoreController.ts" afterDir="false" />
@@ -65,8 +65,8 @@
       <file leaf-file-name="UserBundle.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            <state relative-caret-position="85">
+              <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -78,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/routers/UserRouter.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -86,8 +86,8 @@
       <file leaf-file-name="artisan" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/artisan">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="663">
+              <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
             </state>
           </provider>
         </entry>
@@ -161,15 +161,15 @@
         <option value="$PROJECT_DIR$/src/vendor/validator/CoreValidator.ts" />
         <option value="$PROJECT_DIR$/src/vendor/helpers/generateRandomString.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/api.ts" />
-        <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts" />
         <option value="$PROJECT_DIR$/src/app/server.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle2/controllers/UserController.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/controllers/UserController.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/models/User.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle2/routers/api.ts" />
-        <option value="$PROJECT_DIR$/artisan" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/validators/RegisterValidator.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/UserRouter.ts" />
+        <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts" />
+        <option value="$PROJECT_DIR$/artisan" />
       </list>
     </option>
   </component>
@@ -303,12 +303,12 @@
       <updated>1524396660655</updated>
       <workItem from="1524396661864" duration="16085000" />
       <workItem from="1524413198103" duration="19958000" />
-      <workItem from="1524922112166" duration="23133000" />
+      <workItem from="1524922112166" duration="23317000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59176000" />
+    <option name="totallyTimeSpent" value="59360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2513" height="1096" extended-state="6" />
@@ -672,14 +672,14 @@
     <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/routers/UserRouter.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        <state relative-caret-position="85">
+          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
@@ -688,8 +688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/artisan">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="663">
+          <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
         </state>
       </provider>
     </entry>

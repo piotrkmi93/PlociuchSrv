@@ -1,6 +1,6 @@
 import CoreRouter from '../../../../vendor/router/CoreRouter';
 
-export class UserRouter extends CoreRouter
+export default class UserRouter extends CoreRouter
 {
     routes()
     {
