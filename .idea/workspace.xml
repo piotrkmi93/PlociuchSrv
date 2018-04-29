@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56f7962b-09a1-4484-8db8-c37489c62deb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/vendor/helpers/generateRandomString.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/artisan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bundles/UserBundle/controllers/UserController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bundles/UserBundle/models/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/UserRouter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/validators/RegisterValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bundles/UserBundle/validators/RegisterValidator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/mail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/mail.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/controller/CoreController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/controller/CoreController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/mailer/CoreMailer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/mailer/CoreMailer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/router/CoreRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/router/CoreRouter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/validator/CoreValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/validator/CoreValidator.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -83,11 +70,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="artisan" pinned="false" current-in-tab="true">
+      <file leaf-file-name="artisan" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/artisan">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="663">
               <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mail.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/config/mail.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -153,7 +149,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/app/bundles/TestBundle/routers/TestRouter.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/TestBundle/TestBundle.ts" />
-        <option value="$PROJECT_DIR$/src/config/mail.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/vendor/router/CoreRouter.ts" />
         <option value="$PROJECT_DIR$/src/vendor/controller/CoreController.ts" />
@@ -170,6 +165,7 @@
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/UserRouter.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts" />
         <option value="$PROJECT_DIR$/artisan" />
+        <option value="$PROJECT_DIR$/src/config/mail.ts" />
       </list>
     </option>
   </component>
@@ -303,12 +299,12 @@
       <updated>1524396660655</updated>
       <workItem from="1524396661864" duration="16085000" />
       <workItem from="1524413198103" duration="19958000" />
-      <workItem from="1524922112166" duration="23317000" />
+      <workItem from="1524922112166" duration="23426000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59360000" />
+    <option name="totallyTimeSpent" value="59469000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2513" height="1096" extended-state="6" />
@@ -523,13 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/mail.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/vendor/router/CoreRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
@@ -690,6 +679,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/mail.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
