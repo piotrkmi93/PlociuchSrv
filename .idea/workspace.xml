@@ -2,7 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56f7962b-09a1-4484-8db8-c37489c62deb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/config/mail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/mail.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bundles/ChatBundle/models/Conversation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bundles/ChatBundle/models/Message.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bundles/UserBundle/validators/LoginValidator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sockets/SearchEngineSocket/SearchEngineSocket.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sockets/SearchEngineSocket/controllers/SearchEngineController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/jwt.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/mail.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jQuery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/controller/CoreController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/controller/CoreSocketController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/server/CoreServer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/server/CoreSocketServer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/socket/CoreSocket.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/layouts/layout.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/user/activation.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/avocado" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/bundles/UserBundle/UserBundle.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/bundles/UserBundle/controllers/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/bundles/UserBundle/models/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/UserRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/bundles/UserBundle/routers/UserRouter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bundles/UserBundle/validators/RegisterValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/bundles/UserBundle/validators/RegisterValidator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/mail.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/controller/CoreController.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/helpers/generateRandomString.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/helpers/generateRandomString.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/helpers/mergeRequestData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/helpers/mergeRequestData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/mailer/CoreMailer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/mailer/CoreMailer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/router/CoreRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/router/CoreRouter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/validator/CoreValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/validator/CoreValidator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,74 +50,59 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/controllers/UserController.ts">
+      <file leaf-file-name="Conversation.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bundles/ChatBundle/models/Conversation.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            <state relative-caret-position="153">
+              <caret line="9" column="57" selection-end-line="9" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bundles/ChatBundle/models/Message.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchEngineSocket.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sockets/SearchEngineSocket/SearchEngineSocket.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchEngineController.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sockets/SearchEngineSocket/controllers/SearchEngineController.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CoreSocketServer.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/server/CoreSocketServer.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
               <folding>
-                <element signature="e#0#44#0" expanded="true" />
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/models/User.ts">
+      <file leaf-file-name="server.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/server.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterValidator.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/validators/RegisterValidator.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserBundle.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserRouter.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/routers/UserRouter.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="artisan" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/artisan">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mail.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/config/mail.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="187">
+              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -94,6 +113,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
+        <option value="Pug File" />
+        <option value="JavaScript File" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -107,7 +128,14 @@
       <find>write</find>
       <find>src</find>
       <find>fs.e</find>
+      <find>@</find>
+      <find>@types</find>
+      <find>@vendor</find>
+      <find>listen</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Projekty\plociuchSrv</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -115,57 +143,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/bundles/UserBundle/requests/LoginRequest.ts" />
-        <option value="$PROJECT_DIR$/src/bundles/UserBundle/requests/LogoutRequest.ts" />
-        <option value="$PROJECT_DIR$/src/bundles/CoreBundle/Request.ts" />
-        <option value="$PROJECT_DIR$/src/core/interfaces/ICoreRequest.ts" />
-        <option value="$PROJECT_DIR$/src/core/request/CoreRequest.ts" />
-        <option value="$PROJECT_DIR$/src/core/request/ICoreRequest.ts" />
-        <option value="$PROJECT_DIR$/src/bundles/UserBundle/requests/RegisterRequest.ts" />
-        <option value="$PROJECT_DIR$/src/bundles/CoreBundle/request/ICoreRequest.ts" />
-        <option value="$PROJECT_DIR$/src/bundles/CoreBundle/validator/ICustomValidator.ts" />
-        <option value="$PROJECT_DIR$/src/bundles/CoreBundle/request/CoreRequest.ts" />
-        <option value="$PROJECT_DIR$/src/bundles/CoreBundle/validator/ICoreValidator.ts" />
-        <option value="$PROJECT_DIR$/src/bundles/UserBundle/validators/UserValidator.ts" />
-        <option value="$PROJECT_DIR$/build/.gitignore" />
-        <option value="$PROJECT_DIR$/src/bundles/UserBundle/routes.ts" />
-        <option value="$PROJECT_DIR$/src/bundles/CoreBundle/router/CoreRouter.ts" />
-        <option value="$PROJECT_DIR$/src/test.ts" />
-        <option value="$PROJECT_DIR$/src/bundles/CoreBundle/validator/CoreValidator.ts" />
-        <option value="$PROJECT_DIR$/src/bundles/UserBundle/validators/RegisterValidator.ts" />
-        <option value="$PROJECT_DIR$/src/bundles/UserBundle/routers/api.ts" />
-        <option value="$PROJECT_DIR$/src/server.ts" />
-        <option value="$PROJECT_DIR$/vendor/functions/mergeRequestData.ts" />
-        <option value="$PROJECT_DIR$/vendor/helpers/mergeRequestData.ts" />
-        <option value="$PROJECT_DIR$/vendor/validator/CoreValidator.ts" />
-        <option value="$PROJECT_DIR$/vendor/response/CoreResponse.ts" />
-        <option value="$PROJECT_DIR$/src/bundles/UserBundle/controllers/UserController.ts" />
-        <option value="$PROJECT_DIR$/vendor/request/CoreRequest.ts" />
-        <option value="$PROJECT_DIR$/index.ts" />
-        <option value="$PROJECT_DIR$/node_modules/@types/nodemailer/lib/mailer/index.d.ts" />
-        <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/bundle.ts" />
-        <option value="$PROJECT_DIR$/src/config/database.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/app/bundles/TestBundle/routers/TestRouter.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/TestBundle/TestBundle.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/vendor/router/CoreRouter.ts" />
-        <option value="$PROJECT_DIR$/src/vendor/controller/CoreController.ts" />
-        <option value="$PROJECT_DIR$/src/vendor/mailer/CoreMailer.ts" />
         <option value="$PROJECT_DIR$/src/vendor/validator/CoreValidator.ts" />
         <option value="$PROJECT_DIR$/src/vendor/helpers/generateRandomString.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/api.ts" />
-        <option value="$PROJECT_DIR$/src/app/server.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle2/controllers/UserController.ts" />
-        <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/controllers/UserController.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/models/User.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle2/routers/api.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/validators/RegisterValidator.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/UserRouter.ts" />
-        <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts" />
         <option value="$PROJECT_DIR$/artisan" />
         <option value="$PROJECT_DIR$/src/config/mail.ts" />
+        <option value="$PROJECT_DIR$/src/vendor/mailer/CoreMailer.ts" />
+        <option value="$PROJECT_DIR$/src/config/database.ts" />
+        <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts" />
+        <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/views/activation.pug" />
+        <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/controllers/UserController.ts" />
+        <option value="$PROJECT_DIR$/src/vendor/controller/CoreController.ts" />
+        <option value="$PROJECT_DIR$/src/app/server.ts" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/tsconfig.json" />
+        <option value="$PROJECT_DIR$/avocado.js" />
+        <option value="$PROJECT_DIR$/vendor/mailer/CoreMailer.ts" />
+        <option value="$PROJECT_DIR$/app/bundles/UserBundle/validators/RegisterValidator.ts" />
+        <option value="$PROJECT_DIR$/app/bundles/UserBundle/UserBundle.ts" />
+        <option value="$PROJECT_DIR$/vendor/controller/CoreController.ts" />
+        <option value="$PROJECT_DIR$/vendor/router/CoreRouter.ts" />
+        <option value="$PROJECT_DIR$/app/bundles/UserBundle/validators/LoginValidator.ts" />
+        <option value="$PROJECT_DIR$/public/js/jQuery.js" />
+        <option value="$PROJECT_DIR$/views/user/activation.pug" />
+        <option value="$PROJECT_DIR$/views/layouts/layout.pug" />
+        <option value="$PROJECT_DIR$/vendor/validator/CoreValidator.ts" />
+        <option value="$PROJECT_DIR$/app/bundles/UserBundle/models/User.ts" />
+        <option value="$PROJECT_DIR$/avocado" />
+        <option value="$PROJECT_DIR$/config/jwt.ts" />
+        <option value="$PROJECT_DIR$/app/bundles/UserBundle/controllers/UserController.ts" />
+        <option value="$PROJECT_DIR$/app/bundles/UserBundle/routers/UserRouter.ts" />
+        <option value="$PROJECT_DIR$/index.ts" />
+        <option value="$PROJECT_DIR$/vendor/server/CoreServer.ts" />
+        <option value="$PROJECT_DIR$/app/sockets.ts" />
+        <option value="$PROJECT_DIR$/app/bundles/ChatBundle/models/Conversation.ts" />
+        <option value="$PROJECT_DIR$/app/bundles/ChatBundle/models/Message.ts" />
+        <option value="$PROJECT_DIR$/app/server.ts" />
+        <option value="$PROJECT_DIR$/vendor/socket/CoreSocket.ts" />
+        <option value="$PROJECT_DIR$/vendor/controller/CoreSocketController.ts" />
+        <option value="$PROJECT_DIR$/app/sockets/SearchEngineSocket/SearchEngineSocket.ts" />
+        <option value="$PROJECT_DIR$/app/sockets/SearchEngineSocket/controllers/SearchEngineController.ts" />
+        <option value="$PROJECT_DIR$/vendor/server/CoreSocketServer.ts" />
       </list>
     </option>
   </component>
@@ -179,7 +207,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="666" />
+    <option name="y" value="-9" />
     <option name="width" value="1262" />
     <option name="height" value="1087" />
   </component>
@@ -189,6 +218,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,80 +229,86 @@
             <path>
               <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
               <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
               <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="bundles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
               <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="bundles" type="462c0819:PsiDirectoryNode" />
-              <item name="UserBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="sockets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
               <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="bundles" type="462c0819:PsiDirectoryNode" />
-              <item name="UserBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="routers" type="462c0819:PsiDirectoryNode" />
+              <item name="sockets" type="462c0819:PsiDirectoryNode" />
+              <item name="SearchEngineSocket" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
               <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="sockets" type="462c0819:PsiDirectoryNode" />
+              <item name="SearchEngineSocket" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
               <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
               <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="socket" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="validator" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
-    <property name="node.js.selected.package.prettier" value="" />
+    <property name="node.js.selected.package.prettier" value="C:\Projekty\plociuchSrv\node_modules\prettier" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Projekty\plociuchSrv\src\vendor" />
-      <recent name="C:\Projekty\plociuchSrv\src\app" />
-      <recent name="C:\Projekty\plociuchSrv\src" />
+      <recent name="C:\Projekty\plociuchSrv\app" />
+      <recent name="C:\Projekty\plociuchSrv\app\bundles\sockets" />
+      <recent name="C:\Projekty\plociuchSrv\views\dupa" />
       <recent name="C:\Projekty\plociuchSrv" />
-      <recent name="C:\Projekty\plociuchSrv\vendor" />
+      <recent name="C:\Projekty\plociuchSrv\src\vendor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -299,12 +335,15 @@
       <updated>1524396660655</updated>
       <workItem from="1524396661864" duration="16085000" />
       <workItem from="1524413198103" duration="19958000" />
-      <workItem from="1524922112166" duration="23426000" />
+      <workItem from="1524922112166" duration="24404000" />
+      <workItem from="1525073451904" duration="860000" />
+      <workItem from="1525085675892" duration="10146000" />
+      <workItem from="1525162792276" duration="20187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59469000" />
+    <option name="totallyTimeSpent" value="91640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2513" height="1096" extended-state="6" />
@@ -315,9 +354,9 @@
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info anchor="right" id="Graph Database" order="0" weight="0.32972524" />
-      <window_info anchor="right" id="Terminal" order="4" visible="true" weight="0.35807505" />
-      <window_info anchor="bottom" id="TypeScript" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.111745514" />
+      <window_info anchor="right" id="Terminal" order="4" weight="0.32693332" />
+      <window_info anchor="bottom" id="TypeScript" order="0" weight="0.32976446" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.11419249" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Graph Database Console" order="3" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -332,26 +371,26 @@
       <window_info anchor="bottom" id="Find" order="6" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="right" id="Graph Database" order="0" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.110929854" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
+      <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="bottom" id="Graph Database Console" order="3" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="right" id="Terminal" order="4" visible="true" weight="0.32463294" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="5" />
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="right" id="Terminal" order="4" visible="true" weight="0.32463294" />
-      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,87 +405,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/vendor/helpers/mergeRequestData.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/validators/RegisterValidator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vendor/validator/CoreValidator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/validators/RegisterValidator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/routers/api.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bundles/CoreBundle/Request.ts" />
-    <entry file="file://$PROJECT_DIR$/src/bundles/UserBundle/requests/RegisterRequest.ts" />
-    <entry file="file://$PROJECT_DIR$/src/bundles/CoreBundle/request/ICoreRequest.ts" />
-    <entry file="file://$PROJECT_DIR$/src/bundles/CoreBundle/validator/ICustomValidator.ts" />
-    <entry file="file://$PROJECT_DIR$/src/bundles/CoreBundle/validator/ICoreValidator.ts" />
-    <entry file="file://$PROJECT_DIR$/src/bundles/CoreBundle/request/CoreRequest.ts" />
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1581" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/bundles/CoreBundle/validator/CoreValidator.js" />
-    <entry file="file://$PROJECT_DIR$/src/test.ts" />
-    <entry file="file://$PROJECT_DIR$/src/bundles/PostBundle/routers/PostRouter.ts" />
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/express/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="78" column="40" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/express-serve-static-core/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="180" column="17" selection-start-line="180" selection-start-column="17" selection-end-line="180" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/response/CoreResponse.ts" />
-    <entry file="file://$PROJECT_DIR$/vendor/request/CoreRequest.ts" />
-    <entry file="file://$PROJECT_DIR$/src/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/nodemailer/lib/mailer/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -454,64 +412,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/database.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/TestBundle/Test">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/TestBundle/routers/TestRouter.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/TestBundle/models/Test.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/TestBundle/controllers/TestController.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/TestBundle/routers/Test2Router.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/TestBundle/TestBundle.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/bundles/TestBundle/routers/TestRouter.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/bundles/TestBundle/controllers/TestController.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/bundles/TestBundle/routers/Test2Router.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/bundles/TestBundle/TestBundle.ts" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -519,173 +423,290 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/vendor/router/CoreRouter.js">
+    <entry file="file://$PROJECT_DIR$/build/vendor/router/CoreRouter.js" />
+    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/UserBundle.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/controllers/UserController.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/models/User.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/routers/api.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/validators/RegisterValidator.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/layer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="101" column="42" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
+        <state relative-caret-position="453">
+          <caret line="103" column="2" lean-forward="true" selection-start-line="103" selection-start-column="2" selection-end-line="103" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vendor/validator/CoreValidator.ts">
+    <entry file="file://$PROJECT_DIR$/build/app/server.js" />
+    <entry file="file://$PROJECT_DIR$/public/index.js" />
+    <entry file="file://$PROJECT_DIR$/webpack.config.js" />
+    <entry file="file://$PROJECT_DIR$/vendor/mailer/CoreMailer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vendor/mailer/CoreMailer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        <state relative-caret-position="102">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vendor/controller/CoreController.ts">
+    <entry file="file://$PROJECT_DIR$/vendor/helpers/generateRandomString.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
+          <caret column="26" selection-start-column="6" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vendor/helpers/mergeRequestData.ts">
+    <entry file="file://$PROJECT_DIR$/vendor/helpers/mergeRequestData.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="36" />
+        <state relative-caret-position="221">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="13" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vendor/router/CoreRouter.ts">
+    <entry file="file://$PROJECT_DIR$/app/bundles/UserBundle/UserBundle.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="136" column="12" selection-start-line="136" selection-start-column="12" selection-end-line="136" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/router/CoreRouter.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="70" column="63" lean-forward="true" selection-start-line="70" selection-start-column="63" selection-end-line="70" selection-end-column="63" />
           <folding>
             <element signature="e#0#84#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vendor/helpers/generateRandomString.ts">
+    <entry file="file://$PROJECT_DIR$/vendor/controller/CoreController.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="88" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
+        <state relative-caret-position="51">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/UserBundle.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/server.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/controllers/UserController.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/controllers/UserController.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="67" column="37" lean-forward="true" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/models/User.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/models/User.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="43" column="5" selection-end-line="65" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/routers/api.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/validators/RegisterValidator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/validators/RegisterValidator.ts">
+    <entry file="file://$PROJECT_DIR$/app/bundles/UserBundle/validators/RegisterValidator.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/routers/UserRouter.ts">
+    <entry file="file://$PROJECT_DIR$/public/js/jQuery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle/UserBundle.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        <state relative-caret-position="17">
+          <caret line="1" column="86841" selection-start-line="1" selection-start-column="86841" selection-end-line="1" selection-end-column="86841" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/artisan">
+    <entry file="file://$PROJECT_DIR$/views/layouts/layout.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
+        <state relative-caret-position="221">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/mail.ts">
+    <entry file="file://$PROJECT_DIR$/app/bundles/UserBundle/validators/LoginValidator.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="136">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user/activation.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/bcrypt/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/validator/CoreValidator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/mail.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avocado">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="79" column="22" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/jwt.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bundles/UserBundle/routers/UserRouter.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bundles/UserBundle/controllers/UserController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/socket.io/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="446" column="8" selection-start-line="446" selection-start-column="8" selection-end-line="446" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/server/CoreServer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bundles/sockets/sockets.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bundles/UserBundle/models/User.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-313">
+          <caret selection-end-column="41" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bundles/ChatBundle/models/Conversation.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="57" selection-end-line="9" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bundles/ChatBundle/models/Message.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/server.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/controller/CoreSocketController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/socket/CoreSocket.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sockets/SearchEngineSocket/SearchEngineSocket.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sockets/SearchEngineSocket/controllers/SearchEngineController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/server/CoreSocketServer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
