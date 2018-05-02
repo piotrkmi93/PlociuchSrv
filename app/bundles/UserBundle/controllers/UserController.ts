@@ -3,8 +3,7 @@ import CoreController from "../../../../vendor/controller/CoreController";
 import generateRandomString from "../../../../vendor/helpers/generateRandomString";
 import User from "../models/User";
 import CoreMailer from "../../../../vendor/mailer/CoreMailer";
-import * as JWT from 'jsonwebtoken';
-import {JWTConfig} from "../../../../config/jwt";
+import createToken from "../../../../vendor/helpers/createToken";
 
 export class UserController extends CoreController
 {
@@ -25,27 +24,26 @@ export class UserController extends CoreController
         );
     }
 
+    /**
+     * Checks is credentials correct and creates the token
+     *
+     * @param {e.Request} request
+     * @param {e.Response} response
+     */
     public login(request: Request, response: Response): void
     {
-        // todo check is activate
-        const user = User.findOne({ login: request.body.login }, (err, user:any) => {
+        User.findOne({ login: request.body.login }, (err, user:any) => {
             if(err) throw err;
             if(user.is_active){
-
                 const correct = user.compare(request.body.password);
-                console.log('correct', correct);
-
                 if (correct) {
-
-                    JWT.sign({user}, JWTConfig.secret, (err, token) => {
+                    createToken(user, token => {
                         response.send({token});
-                    })
-
+                    });
                 } else {
                     response.status(409);
                     response.send(['Password is not correct']);
                 }
-
             } else {
                 response.status(405);
                 response.send(['This account is not activated']);

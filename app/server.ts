@@ -7,6 +7,7 @@ import UserBundle from './bundles/UserBundle/UserBundle';
 
 // import sockets
 import SearchEngineSocket from "./sockets/SearchEngineSocket/SearchEngineSocket";
+import ChatSocket from "./sockets/ChatSocket/ChatSocket";
 
 
 // server
@@ -16,6 +17,7 @@ export default class Server extends CoreSocketServer
     {
         super();
         this.bundles();
+        this.isSocket && this.sockets();
     }
 
     // connect your bundles
@@ -28,5 +30,6 @@ export default class Server extends CoreSocketServer
 	protected sockets(): void
     {
         SearchEngineSocket.init();
+        ChatSocket.init();
     }
 }

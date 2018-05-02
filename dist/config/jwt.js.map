@@ -1,1 +1,1 @@
-{"version":3,"file":"jwt.js","sourceRoot":"","sources":["../../config/jwt.ts"],"names":[],"mappings":";;AAAA,IAAM,SAAS,GAAG;IAEd,MAAM,EAAE,sBAAsB;CAEjC,CAAC;AAEM,8BAAS"}
+{"version":3,"file":"jwt.js","sourceRoot":"","sources":["../../config/jwt.ts"],"names":[],"mappings":";;AAAA,IAAM,SAAS,GAAG;IAEd,MAAM,EAAE,sBAAsB;CAEjC,CAAC;AAEF,kBAAe,SAAS,CAAC"}

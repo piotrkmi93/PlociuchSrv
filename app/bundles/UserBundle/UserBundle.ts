@@ -1,10 +1,10 @@
 import {Application} from 'express';
-import UserRouter from "./routers/UserRouter";
+import CoreBundle from "../../../vendor/bundle/CoreBundle";
 
-export default class UserBundle
+export default class UserBundle extends CoreBundle
 {
 	public static init(app: Application)
 	{
-		app.use('/user/', UserRouter.getRouter(this.name));
+        this.route('/user/', 'UserRouter', app);
 	}
 }

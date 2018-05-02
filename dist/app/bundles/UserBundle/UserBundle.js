@@ -1,13 +1,25 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
-var UserRouter_1 = require("./routers/UserRouter");
-var UserBundle = /** @class */ (function () {
+var CoreBundle_1 = require("../../../vendor/bundle/CoreBundle");
+var UserBundle = /** @class */ (function (_super) {
+    __extends(UserBundle, _super);
     function UserBundle() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     UserBundle.init = function (app) {
-        app.use('/user/', UserRouter_1.default.getRouter(this.name));
+        this.route('/user/', 'UserRouter', app);
     };
     return UserBundle;
-}());
+}(CoreBundle_1.default));
 exports.default = UserBundle;
 //# sourceMappingURL=UserBundle.js.map

@@ -5,13 +5,17 @@
  * Little helper program based on artisan from Laravel PHP framework
  *
  * Commands:
- * help
- * make
- * make bundle {bname}
- * make controller {bundle} {bname}
- * make model {bundle} {bname}
- * make validator {bundle} {bname}
- * make router {bundle} {bname}
+ * help <- todo write
+ * make <- todo write
+ * make bundle {bname} <- todo rewrite
+ * make controller {bundle} {bname} <- todo rewrite
+ * make model {bundle} {bname} <- todo rewrite
+ * make validator {bundle} {bname} <- todo rewrite
+ * make router {bundle} {bname} <- todo rewrite
+ * make socket <- todo write
+ * make socket controller <- todo write
+ *
+ * TODO: project has been changed, avocado program need to be rewrite. Coming back soon :)
  *
  */
 

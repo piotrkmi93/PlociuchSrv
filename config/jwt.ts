@@ -4,4 +4,4 @@ const JWTConfig = {
 
 };
 
-export {JWTConfig};
+export default JWTConfig;

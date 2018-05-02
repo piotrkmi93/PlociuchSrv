@@ -24,5 +24,5 @@ var UserRouter = /** @class */ (function (_super) {
     };
     return UserRouter;
 }(CoreRouter_1.default));
-exports.default = UserRouter;
+exports.UserRouter = UserRouter;
 //# sourceMappingURL=UserRouter.js.map

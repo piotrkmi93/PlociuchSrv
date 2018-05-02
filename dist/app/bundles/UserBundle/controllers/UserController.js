@@ -14,8 +14,7 @@ var CoreController_1 = require("../../../../vendor/controller/CoreController");
 var generateRandomString_1 = require("../../../../vendor/helpers/generateRandomString");
 var User_1 = require("../models/User");
 var CoreMailer_1 = require("../../../../vendor/mailer/CoreMailer");
-var JWT = require("jsonwebtoken");
-var jwt_1 = require("../../../../config/jwt");
+var createToken_1 = require("../../../../vendor/helpers/createToken");
 var UserController = /** @class */ (function (_super) {
     __extends(UserController, _super);
     function UserController() {
@@ -30,16 +29,20 @@ var UserController = /** @class */ (function (_super) {
     UserController.prototype.register = function (request, response) {
         this.create(request.body.login, request.body.email, request.body.password, request, response);
     };
+    /**
+     * Checks is credentials correct and creates the token
+     *
+     * @param {e.Request} request
+     * @param {e.Response} response
+     */
     UserController.prototype.login = function (request, response) {
-        // todo check is activate
-        var user = User_1.default.findOne({ login: request.body.login }, function (err, user) {
+        User_1.default.findOne({ login: request.body.login }, function (err, user) {
             if (err)
                 throw err;
             if (user.is_active) {
                 var correct = user.compare(request.body.password);
-                console.log('correct', correct);
                 if (correct) {
-                    JWT.sign({ user: user }, jwt_1.JWTConfig.secret, function (err, token) {
+                    createToken_1.default(user, function (token) {
                         response.send({ token: token });
                     });
                 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"Conversation.js","sourceRoot":"","sources":["../../../../../app/bundles/ChatBundle/models/Conversation.ts"],"names":[],"mappings":";;AAAA,qCAAyC;AAEzC,IAAM,kBAAkB,GAAW,IAAI,iBAAM,CAAC;IAE1C,GAAG,EAAE,iBAAM,CAAC,KAAK,CAAC,QAAQ;IAC1B,GAAG,EAAE,iBAAM,CAAC,KAAK,CAAC,QAAQ;CAE7B,CAAC,CAAC;AAEH,kBAAe,gBAAK,CAAC,cAAc,EAAE,kBAAkB,CAAC,CAAC"}
