@@ -13,6 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var CoreSocketController_1 = require("../../../../vendor/controller/CoreSocketController");
 var Conversation_1 = require("../../../bundles/ChatBundle/models/Conversation");
 var User_1 = require("../../../bundles/UserBundle/models/User");
+var Message_1 = require("../../../bundles/ChatBundle/models/Message");
 var ContributorsController = /** @class */ (function (_super) {
     __extends(ContributorsController, _super);
     function ContributorsController() {
@@ -75,7 +76,33 @@ var ContributorsController = /** @class */ (function (_super) {
                     var u = users_1[_i];
                     _loop_2(u);
                 }
+                Message_1.default.aggregate([
+                    {
+                        $match: {
+                            conversation: { $in: contributors.map(function (_a) {
+                                    var conversationId = _a.conversationId;
+                                    return conversationId;
+                                }) },
+                            user: { $nin: [myId] }
+                        }
+                    },
+                    {
+                        $group: {
+                            _id: null,
+                            count: { $sum: 1 }
+                        }
+                    }
+                ]).then(function (result) {
+                    console.log(result);
+                });
+                // const mmongo = {
+                //     conversation: { $in: contributors.map(({conversationId}) => conversationId) },
+                //     user
+                // };
+                // Message.find()
                 // todo messages
+                // todo count unread messages
+                // todo get last message
                 connection.emit('contributors', contributors);
             });
         });

@@ -6,8 +6,16 @@ const MessageSchema: Schema = new Schema({
     user: Schema.Types.ObjectId,
     text: String,
     created: Date,
-    read: Boolean
+    read: { type: Date }
 
+});
+
+MessageSchema.pre('save', function(next){
+    let message:any = this,
+        date = new Date();
+    if(!message.created){
+        message.created = date;
+    }
 });
 
 export default model('Message', MessageSchema);

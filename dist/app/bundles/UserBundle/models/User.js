@@ -38,7 +38,6 @@ UserSchema.pre('save', function (next) {
     var user = this, date = new Date();
     user.updated = date;
     if (!user.created) {
-        console.log('saving created');
         user.created = date;
         bcrypt.genSalt(10, function (err, salt) { return bcrypt.hash(user.password, salt, function (err, hash) {
             user.password = hash;

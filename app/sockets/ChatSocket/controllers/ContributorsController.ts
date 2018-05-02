@@ -47,6 +47,25 @@ export class ContributorsController extends CoreSocketController
                     }
                 }
 
+                Message.aggregate([
+                    {
+                        $match: {
+                            conversation: { $in: contributors.map(({conversationId}) => conversationId) },
+                            user: { $nin: [myId] }
+                        }
+                    },
+                    {
+                        $group: {
+                            _id: null,
+                            count: { $sum: 1 }
+                        }
+                    }
+                ]).then(result => {
+
+                    console.log(result);
+
+                });
+
                 // const mmongo = {
                 //     conversation: { $in: contributors.map(({conversationId}) => conversationId) },
                 //     user
