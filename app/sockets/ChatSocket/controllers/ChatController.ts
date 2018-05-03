@@ -11,10 +11,14 @@ export class ChatController extends CoreSocketController
             user: myId,
             conversation: data.conversationId,
             text: data.text
-        }).then(success => {
+        }).then((success:any) => {
             connection.emit('send-success');
 
-
+            this.sendToUser(data.userId, connections, {
+                text: data.text,
+                date: success.created,
+                user: myId
+            });
 
         }).catch(failure => {
             connection.emit('send-failure');
@@ -34,12 +38,19 @@ export class ChatController extends CoreSocketController
         })
     }
 
-    private sendToUser(UserId, socket, connections)
+    public conversation(connection, connections, data)
+    {
+        // todo
+    }
+
+    private sendToUser(UserId, connections, data)
     {
         const sockets = connections
             .filter(({userId}) => userId === UserId)
             .map(({connection}) => connection);
 
-        // todo
+        for(const s of sockets){
+            s.emit('message', data);
+        }
     }
 }

@@ -6,11 +6,10 @@ var MessageSchema = new mongoose_1.Schema({
     user: mongoose_1.Schema.Types.ObjectId,
     text: String,
     created: Date,
-    read: { type: Date, default: null }
+    read: { type: Date }
 });
 MessageSchema.pre('save', function (next) {
     var message = this, date = new Date();
-    message.read = date;
     if (!message.created) {
         message.created = date;
     }

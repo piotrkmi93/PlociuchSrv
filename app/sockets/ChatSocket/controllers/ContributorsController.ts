@@ -47,24 +47,24 @@ export class ContributorsController extends CoreSocketController
                     }
                 }
 
-                Message.aggregate([
-                    {
-                        $match: {
-                            conversation: { $in: contributors.map(({conversationId}) => conversationId) },
-                            user: { $nin: [myId] }
-                        }
-                    },
-                    {
-                        $group: {
-                            _id: null,
-                            count: { $sum: 1 }
-                        }
-                    }
-                ]).then(result => {
-
-                    console.log(result);
-
-                });
+                // Message.aggregate([
+                //     {
+                //         $match: {
+                //             conversation: { $in: contributors.map(({conversationId}) => conversationId) },
+                //             user: { $nin: [myId] }
+                //         }
+                //     },
+                //     {
+                //         $group: {
+                //             _id: null,
+                //             count: { $sum: 1 }
+                //         }
+                //     }
+                // ]).then(result => {
+                //
+                //     console.log(result);
+                //
+                // });
 
                 // const mmongo = {
                 //     conversation: { $in: contributors.map(({conversationId}) => conversationId) },
@@ -76,6 +76,8 @@ export class ContributorsController extends CoreSocketController
                 // todo messages
                 // todo count unread messages
                 // todo get last message
+
+                console.log('wololo');
 
                 connection.emit('contributors', contributors);
 
