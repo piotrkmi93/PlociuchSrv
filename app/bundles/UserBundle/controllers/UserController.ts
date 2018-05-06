@@ -51,11 +51,6 @@ export class UserController extends CoreController
         });
     }
 
-    public logout(request: Request, response: Response): void
-    {
-        // todo
-    }
-
     /**
      * Account activation, return success or failure view
      *

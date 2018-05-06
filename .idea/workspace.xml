@@ -3,14 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="56f7962b-09a1-4484-8db8-c37489c62deb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bundles/ChatBundle/models/Message.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/bundles/ChatBundle/models/Message.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bundles/UserBundle/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/bundles/UserBundle/controllers/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bundles/UserBundle/routers/UserRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/bundles/UserBundle/routers/UserRouter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sockets/ChatSocket/ChatSocket.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/sockets/ChatSocket/ChatSocket.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ChatController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ChatController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ContributorsController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ContributorsController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/app/bundles/ChatBundle/models/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/bundles/ChatBundle/models/Message.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/app/bundles/ChatBundle/models/Message.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/bundles/ChatBundle/models/Message.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/bundles/UserBundle/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/bundles/UserBundle/controllers/UserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/bundles/UserBundle/controllers/UserController.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/bundles/UserBundle/controllers/UserController.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/bundles/UserBundle/routers/UserRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/bundles/UserBundle/routers/UserRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/bundles/UserBundle/routers/UserRouter.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/bundles/UserBundle/routers/UserRouter.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/sockets/ChatSocket/ChatSocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/sockets/ChatSocket/ChatSocket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/sockets/ChatSocket/ChatSocket.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/sockets/ChatSocket/ChatSocket.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/app/sockets/ChatSocket/controllers/ChatController.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/sockets/ChatSocket/controllers/ChatController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/app/sockets/ChatSocket/controllers/ChatController.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/sockets/ChatSocket/controllers/ChatController.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/app/sockets/ChatSocket/controllers/ContributorsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/sockets/ChatSocket/controllers/ContributorsController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/app/sockets/ChatSocket/controllers/ContributorsController.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app/sockets/ChatSocket/controllers/ContributorsController.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/vendor/server/CoreSocketServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendor/server/CoreSocketServer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/vendor/server/CoreSocketServer.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vendor/server/CoreSocketServer.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/server/CoreSocketServer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/server/CoreSocketServer.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,112 +36,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47557253">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ChatSocket.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/sockets/ChatSocket/ChatSocket.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="59" selection-start-column="59" selection-end-column="59" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ChatController.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ChatController.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="359">
-                  <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#0#86#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="avocado" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/avocado">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="server.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/server.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" selection-start-line="6" selection-end-line="6" />
-                  <folding>
-                    <element signature="e#220#301#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="UserController.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/bundles/UserBundle/controllers/UserController.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#0#44#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Message.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/bundles/ChatBundle/models/Message.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SearchEngineSocket.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/sockets/SearchEngineSocket/SearchEngineSocket.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SearchEngineController.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/sockets/SearchEngineSocket/controllers/SearchEngineController.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="512">
-                  <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
-                  <folding>
-                    <element signature="e#0#86#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ContributorsController.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ContributorsController.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="79" column="38" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
-                  <folding>
-                    <element signature="e#0#86#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="ContributorsController.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ContributorsController.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatController.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ChatController.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -154,6 +87,9 @@
       <find>@vendor</find>
       <find>listen</find>
       <find>jsonweb</find>
+      <find>contributors[index]</find>
+      <find>console.log</find>
+      <find>console</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Projekty\plociuchSrv</dir>
@@ -165,7 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/bundles/UserBundle2/routers/api.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/validators/RegisterValidator.ts" />
         <option value="$PROJECT_DIR$/src/app/bundles/UserBundle/routers/UserRouter.ts" />
         <option value="$PROJECT_DIR$/artisan" />
@@ -196,26 +131,27 @@
         <option value="$PROJECT_DIR$/vendor/controller/CoreSocketController.ts" />
         <option value="$PROJECT_DIR$/app/sockets/UserSocket/controllers/UserController.ts" />
         <option value="$PROJECT_DIR$/app/sockets/UserSocket/UserSocket.ts" />
-        <option value="$PROJECT_DIR$/app/bundles/UserBundle/routers/UserRouter.ts" />
         <option value="$PROJECT_DIR$/vendor/bundle/CoreBundle.ts" />
         <option value="$PROJECT_DIR$/vendor/router/CoreRouter.ts" />
         <option value="$PROJECT_DIR$/app/bundles/UserBundle/UserBundle.ts" />
-        <option value="$PROJECT_DIR$/app/bundles/UserBundle/controllers/UserController.ts" />
         <option value="$PROJECT_DIR$/config/jwt.ts" />
         <option value="$PROJECT_DIR$/vendor/helpers/createToken.ts" />
         <option value="$PROJECT_DIR$/vendor/socket/CoreSocket.ts" />
         <option value="$PROJECT_DIR$/vendor/helpers/verifyToken.ts" />
-        <option value="$PROJECT_DIR$/vendor/server/CoreSocketServer.ts" />
         <option value="$PROJECT_DIR$/app/sockets/SearchEngineSocket/SearchEngineSocket.ts" />
         <option value="$PROJECT_DIR$/app/sockets/ChatSocket/ContributorsController.ts" />
         <option value="$PROJECT_DIR$/avocado" />
-        <option value="$PROJECT_DIR$/app/sockets/SearchEngineSocket/controllers/SearchEngineController.ts" />
         <option value="$PROJECT_DIR$/app/server.ts" />
-        <option value="$PROJECT_DIR$/app/sockets/ChatSocket/ChatSocket.ts" />
         <option value="$PROJECT_DIR$/app/bundles/UserBundle/models/User.ts" />
+        <option value="$PROJECT_DIR$/app/sockets/ChatSocket/ChatSocket.ts" />
         <option value="$PROJECT_DIR$/app/bundles/ChatBundle/models/Message.ts" />
-        <option value="$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ChatController.ts" />
+        <option value="$PROJECT_DIR$/app/sockets/SearchEngineSocket/controllers/SearchEngineController.ts" />
+        <option value="$PROJECT_DIR$/vendor/server/CoreSocketServer.ts" />
+        <option value="$PROJECT_DIR$/vendor/helpers/removeToken.ts" />
+        <option value="$PROJECT_DIR$/app/bundles/UserBundle/controllers/UserController.ts" />
+        <option value="$PROJECT_DIR$/app/bundles/UserBundle/routers/UserRouter.ts" />
         <option value="$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ContributorsController.ts" />
+        <option value="$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ChatController.ts" />
       </list>
     </option>
   </component>
@@ -240,6 +176,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,12 +188,6 @@
               <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
               <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="bundles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
@@ -279,22 +210,10 @@
               <item name="ChatSocket" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plociuchSrv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plociuchSrv" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -345,23 +264,25 @@
       <workItem from="1525162792276" duration="20470000" />
       <workItem from="1525251899751" duration="21417000" />
       <workItem from="1525292419061" duration="2754000" />
+      <workItem from="1525593381786" duration="14165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116094000" />
+    <option name="totallyTimeSpent" value="130259000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1873" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="2513" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info anchor="right" id="Graph Database" order="0" weight="0.32972524" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.27889714" />
+      <window_info active="true" anchor="right" id="Terminal" order="4" visible="true" weight="0.27854812" />
       <window_info anchor="bottom" id="TypeScript" order="0" weight="0.32976446" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.116445914" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.11745514" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Graph Database Console" order="3" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -376,25 +297,25 @@
       <window_info anchor="bottom" id="Find" order="6" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="right" id="Graph Database" order="0" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="7" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.110929854" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
-      <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="bottom" id="Graph Database Console" order="3" />
+      <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="right" id="Terminal" order="4" visible="true" weight="0.32463294" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
       <window_info id="Favorites" order="0" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -410,27 +331,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ContributorsController.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sockets/SearchEngineSocket/controllers/SearchEngineController.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="55" column="8" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="56" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/UserBundle.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/controllers/UserController.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/models/User.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/bundles/UserBundle2/routers/api.ts" />
@@ -525,9 +425,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -559,13 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/bundles/ChatBundle/models/Conversation.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="57" selection-end-line="9" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -577,13 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bundles/UserBundle/routers/UserRouter.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -636,34 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/socket/CoreSocket.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/server/CoreSocketServer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="69" column="76" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/helpers/createToken.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/helpers/verifyToken.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/avocado">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -681,20 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/sockets/ChatSocket/ChatSocket.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="59" selection-start-column="59" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sockets/SearchEngineSocket/SearchEngineSocket.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bundles/UserBundle/models/User.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -705,47 +546,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dist/vendor/socket/CoreSocket.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sockets/SearchEngineSocket/SearchEngineSocket.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/socket/CoreSocket.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bundles/ChatBundle/models/Conversation.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="57" selection-end-line="9" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bundles/ChatBundle/models/Message.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sockets/ChatSocket/ChatSocket.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sockets/SearchEngineSocket/controllers/SearchEngineController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="35" column="56" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/sockets/ChatSocket/controllers/ContributorsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/server/CoreSocketServer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="59" column="11" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/helpers/verifyToken.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/helpers/removeToken.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bundles/UserBundle/routers/UserRouter.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/helpers/createToken.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/bundles/UserBundle/controllers/UserController.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="88">
+          <caret line="50" column="11" lean-forward="true" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/bundles/ChatBundle/models/Message.ts">
+    <entry file="file://$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ContributorsController.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="272">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#86#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ChatController.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sockets/SearchEngineSocket/controllers/SearchEngineController.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sockets/ChatSocket/controllers/ContributorsController.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="79" column="38" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
+        <state relative-caret-position="170">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
             <element signature="e#0#86#0" expanded="true" />
           </folding>

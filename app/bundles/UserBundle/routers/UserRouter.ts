@@ -4,10 +4,11 @@ export class UserRouter extends CoreRouter
 {
     routes()
     {
+        // api
         this.post('/register', 'UserController@register', 'RegisterValidator');
         this.post('/login', 'UserController@login', 'LoginValidator');
-        // this.post('/logout', 'UserController@logout', 'Auth,LogoutValidator');
 
+        // normal
         this.get('/activate/:activationCode', 'UserController@activate');
     }
 }

@@ -13,11 +13,35 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var CoreSocketController_1 = require("../../../../vendor/controller/CoreSocketController");
 var Conversation_1 = require("../../../bundles/ChatBundle/models/Conversation");
 var User_1 = require("../../../bundles/UserBundle/models/User");
+var Message_1 = require("../../../bundles/ChatBundle/models/Message");
+function nextContributor(contributors, myId, resolve, index) {
+    if (index === void 0) { index = 0; }
+    if (typeof contributors[index] === 'undefined') {
+        resolve();
+    }
+    else {
+        findLastMessage(contributors[index], function () {
+            nextContributor(contributors, myId, resolve, index + 1);
+        });
+    }
+}
+function findLastMessage(contributor, resolve) {
+    Message_1.default.find({
+        conversation: contributor.conversationId
+    }).sort({ _id: -1 }).limit(1).then(function (messages) {
+        if (messages.length) {
+            contributor.lastMessage.text = messages[0].text;
+            contributor.lastMessage.created = (new Date(messages[0].created)).getTime();
+        }
+        resolve();
+    }, function (err) { throw err; });
+}
 var ContributorsController = /** @class */ (function (_super) {
     __extends(ContributorsController, _super);
     function ContributorsController() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    // todo: 'this' is binding with socket, not class
     ContributorsController.prototype.all = function (connection, connections, data) {
         var contributors = [];
         var myCon = connections.find(function (c) { return c.connection === connection; });
@@ -44,7 +68,7 @@ var ContributorsController = /** @class */ (function (_super) {
                         },
                         lastMessage: {
                             text: undefined,
-                            date: undefined
+                            created: undefined
                         },
                         unreadMessages: 0
                     };
@@ -75,34 +99,9 @@ var ContributorsController = /** @class */ (function (_super) {
                     var u = users_1[_i];
                     _loop_2(u);
                 }
-                // Message.aggregate([
-                //     {
-                //         $match: {
-                //             conversation: { $in: contributors.map(({conversationId}) => conversationId) },
-                //             user: { $nin: [myId] }
-                //         }
-                //     },
-                //     {
-                //         $group: {
-                //             _id: null,
-                //             count: { $sum: 1 }
-                //         }
-                //     }
-                // ]).then(result => {
-                //
-                //     console.log(result);
-                //
-                // });
-                // const mmongo = {
-                //     conversation: { $in: contributors.map(({conversationId}) => conversationId) },
-                //     user
-                // };
-                // Message.find()
-                // todo messages
-                // todo count unread messages
-                // todo get last message
-                console.log('wololo');
-                connection.emit('contributors', contributors);
+                nextContributor(contributors, myId, function () {
+                    connection.emit('contributors', contributors);
+                });
             });
         });
     };

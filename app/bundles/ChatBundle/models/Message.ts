@@ -5,8 +5,7 @@ const MessageSchema: Schema = new Schema({
     conversation: Schema.Types.ObjectId,
     user: Schema.Types.ObjectId,
     text: String,
-    created: Date,
-    read: { type: Date }
+    created: Date
 
 });
 
@@ -16,6 +15,7 @@ MessageSchema.pre('save', function(next){
     if(!message.created){
         message.created = date;
     }
+    next();
 });
 
 export default model('Message', MessageSchema);

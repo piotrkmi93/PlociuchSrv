@@ -3,8 +3,37 @@ import Conversation from "../../../bundles/ChatBundle/models/Conversation";
 import User from "../../../bundles/UserBundle/models/User";
 import Message from "../../../bundles/ChatBundle/models/Message";
 
+function nextContributor(contributors, myId, resolve, index = 0)
+{
+    if ( typeof contributors[index] === 'undefined' ) {
+        resolve();
+    } else {
+        findLastMessage(contributors[index], () => {
+            nextContributor(contributors, myId, resolve,index + 1);
+        });
+    }
+}
+
+function findLastMessage(contributor, resolve)
+{
+    Message.find({
+        conversation: contributor.conversationId
+    }).sort({_id:-1}).limit(1).then(
+        (messages:any) => {
+            if(messages.length){
+                contributor.lastMessage.text = messages[0].text;
+                contributor.lastMessage.created = (new Date(messages[0].created)).getTime();
+            }
+            resolve();
+        },
+        (err) =>  { throw err; }
+    );
+}
+
 export class ContributorsController extends CoreSocketController
 {
+    // todo: 'this' is binding with socket, not class
+
     public all(connection, connections, data)
     {
         let contributors = [];
@@ -29,7 +58,7 @@ export class ContributorsController extends CoreSocketController
                         },
                         lastMessage: {
                             text: undefined,
-                            date: undefined
+                            created: undefined
                         },
                         unreadMessages: 0
                     };
@@ -47,39 +76,9 @@ export class ContributorsController extends CoreSocketController
                     }
                 }
 
-                // Message.aggregate([
-                //     {
-                //         $match: {
-                //             conversation: { $in: contributors.map(({conversationId}) => conversationId) },
-                //             user: { $nin: [myId] }
-                //         }
-                //     },
-                //     {
-                //         $group: {
-                //             _id: null,
-                //             count: { $sum: 1 }
-                //         }
-                //     }
-                // ]).then(result => {
-                //
-                //     console.log(result);
-                //
-                // });
-
-                // const mmongo = {
-                //     conversation: { $in: contributors.map(({conversationId}) => conversationId) },
-                //     user
-                // };
-
-                // Message.find()
-
-                // todo messages
-                // todo count unread messages
-                // todo get last message
-
-                console.log('wololo');
-
-                connection.emit('contributors', contributors);
+                nextContributor(contributors, myId, () => {
+                    connection.emit('contributors', contributors);
+                });
 
             });
         });

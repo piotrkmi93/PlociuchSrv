@@ -63,8 +63,8 @@ var CoreSocketServer = /** @class */ (function (_super) {
             if (typeof decoded !== 'undefined') {
                 var idx = CoreSocketServer.connections.findIndex(function (c) { return c.connection === connection; });
                 if (idx !== -1) {
-                    console.log('attached');
-                    CoreSocketServer.connections[idx].userId = decoded.user._id;
+                    console.log('attached', decoded);
+                    CoreSocketServer.connections[idx].userId = decoded._user.id;
                 }
                 else {
                     connection.emit('invalid-token');

@@ -17,9 +17,10 @@ var UserRouter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     UserRouter.prototype.routes = function () {
+        // api
         this.post('/register', 'UserController@register', 'RegisterValidator');
         this.post('/login', 'UserController@login', 'LoginValidator');
-        // this.post('/logout', 'UserController@logout', 'Auth,LogoutValidator');
+        // normal
         this.get('/activate/:activationCode', 'UserController@activate');
     };
     return UserRouter;

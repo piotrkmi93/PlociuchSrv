@@ -57,9 +57,6 @@ var UserController = /** @class */ (function (_super) {
             }
         });
     };
-    UserController.prototype.logout = function (request, response) {
-        // todo
-    };
     /**
      * Account activation, return success or failure view
      *

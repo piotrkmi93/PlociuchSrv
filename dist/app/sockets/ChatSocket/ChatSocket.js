@@ -18,6 +18,9 @@ var ChatSocket = /** @class */ (function (_super) {
     }
     ChatSocket.init = function () {
         this.on('contributors', 'ContributorsController@all');
+        this.on('conversation', 'ChatController@conversation');
+        this.on('send', 'ChatController@send');
+        this.on('read', 'ChatController@read');
     };
     return ChatSocket;
 }(CoreSocket_1.default));

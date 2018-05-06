@@ -66,8 +66,8 @@ export default abstract class CoreSocketServer extends CoreServer
             if(typeof decoded !== 'undefined'){
                 const idx = CoreSocketServer.connections.findIndex(c => c.connection === connection);
                 if(idx !== -1){
-                    console.log('attached');
-                    CoreSocketServer.connections[idx].userId = decoded.user._id;
+                    console.log('attached', decoded);
+                    CoreSocketServer.connections[idx].userId = decoded._user.id;
                 } else {
                     connection.emit('invalid-token');
                 }
