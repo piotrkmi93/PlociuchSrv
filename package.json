@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "cls && tsc && node ./build/index.js"
+    "server": "cls && tsc && node ./dist/index.js"
   },
   "author": "",
   "license": "ISC",

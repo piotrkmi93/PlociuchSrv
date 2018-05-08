@@ -1,4 +1,3 @@
-// import CoreServer from "../vendor/server/CoreServer";
 import CoreSocketServer from "../vendor/server/CoreSocketServer";
 
 // import bundles
